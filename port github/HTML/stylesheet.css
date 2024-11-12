@@ -1,0 +1,131 @@
+/* Base styles for the head */
+head {
+    background-color: black;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Body styles */
+body {
+    font-size: 20px; /* Corrected the syntax */
+    font-style: bold;
+    background-image: url(../Photos/1669568508802.png);
+    background-size: cover; /* Ensure the background image covers the entire body */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* CSS Variables for Light and Dark Mode */
+:root {
+    --bg-color: #ffffff; /* Light mode background */
+    --text-color: #333333; /* Light mode text */
+    --link-color: #3498db; /* Link color */
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --bg-color: #333333; /* Dark mode background */
+    --text-color: #ffffff; /* Dark mode text */
+    --link-color: #1e90ff; /* Dark mode link color */
+}
+
+/* Apply Variables */
+body {
+    background-color: whitesmoke;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+div {
+    color:black; /* Use the variable for text color */
+    font-weight: bolder;
+    font-stretch: expanded;
+}
+
+.section {
+    font: 1em sans-serif;
+    font-weight: 300; /* Corrected to valid weight */
+    font-stretch: expanded;
+}
+
+/* Navigation styles */
+nav {
+    background-color: var(--bg-color);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning toggle button */
+}
+
+/* Button navigation styles */
+.nav-buttons {
+    display:flex;
+    gap: 15px; /* Space between buttons */
+}
+
+.nav-button {
+    background-color:blue;;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: darkblue; /* Darker color on hover */
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: var(--text-color);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--link-color);
+}
+
+/* Toggle Button for Dark Mode */
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--text-color);
+}
+
+/* Styling for the logo text */
+.logo-text {
+    font-size: 2em; /* Adjust this value to make it larger */
+    font-weight: bold; /* Ensure the text is bold */
+    color: var(--text-color); /* Use the variable for consistency */
+    transition: color 0.3s; /* Smooth transition for color changes */
+}
+
+/* Flip animation styles */
+.flip-container {
+    perspective: 1000px; /* Add perspective for the flip effect */
+}
+
+.flipper {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
